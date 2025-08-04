@@ -1,103 +1,176 @@
-import Image from "next/image";
+"use client";
+
+import {
+  Navbar,
+  NavBody,
+  NavItems,
+  NavbarLogo,
+  NavbarButton,
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
+} from "@/components/resizable-navbar";
+import { HeroParallax } from "@/components/hero-parallax";
+import { GoogleGeminiEffect } from "@/components/google-gemini-effect";
+import { Timeline } from "@/components/timeline";
+
+import React, { useRef, useState } from "react";
+import { useScroll, useSpring, useTransform } from "motion/react";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  const navLinks = [
+    { name: "Features", link: "#features" },
+    { name: "Team", link: "#team" },
+    { name: "Compare", link: "#compare" },
+  ];
+
+  const products = [
+    { title: "Real Estate Growth", link: "#features", thumbnail: "/images/thumb1.png" },
+    { title: "Private Equity", link: "#team", thumbnail: "/images/thumb2.png" },
+    { title: "Diversified Assets", link: "#compare", thumbnail: "/images/thumb3.png" },
+    { title: "Wealth Planning", link: "#features", thumbnail: "/images/thumb1.png" },
+    { title: "Capital Preservation", link: "#team", thumbnail: "/images/thumb2.png" },
+    { title: "Fixed Income", link: "#compare", thumbnail: "/images/thumb3.png" },
+    { title: "Global Strategy", link: "#features", thumbnail: "/images/thumb1.png" },
+    { title: "ESG Investments", link: "#team", thumbnail: "/images/thumb2.png" },
+    { title: "Startup Advisory", link: "#compare", thumbnail: "/images/thumb3.png" },
+    { title: "Alternative Assets", link: "#features", thumbnail: "/images/thumb1.png" },
+    { title: "Pension Planning", link: "#team", thumbnail: "/images/thumb2.png" },
+    { title: "Smart Portfolio", link: "#compare", thumbnail: "/images/thumb3.png" },
+    { title: "Risk Management", link: "#features", thumbnail: "/images/thumb1.png" },
+    { title: "Liquidity Services", link: "#team", thumbnail: "/images/thumb2.png" },
+    { title: "Venture Capital", link: "#compare", thumbnail: "/images/thumb3.png" },
+  ];
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const pathLengths = Array.from({ length: 5 }, () =>
+    useSpring(useTransform(scrollYProgress, [0, 1], [0, 1]), {
+      stiffness: 400,
+      damping: 90,
+    })
+  );
+
+  return (
+    <>
+      <Navbar>
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navLinks} />
+          <div className="ml-auto hidden lg:flex space-x-4">
+            <NavbarButton
+              href="https://zarmilli.github.io/Squarre/login.html"
+              variant="secondary"
+            >
+              Login
+            </NavbarButton>
+            <NavbarButton href="/download" variant="primary">
+              Get Started
+            </NavbarButton>
+          </div>
+        </NavBody>
+
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isMobileOpen}
+              onClick={() => setIsMobileOpen((prev) => !prev)}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </MobileNavHeader>
+          <MobileNavMenu
+            isOpen={isMobileOpen}
+            onClose={() => setIsMobileOpen(false)}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            {navLinks.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                className="text-neutral-700 dark:text-white"
+                onClick={() => setIsMobileOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+            <NavbarButton
+              href="https://zarmilli.github.io/Squarre/login.html"
+              variant="secondary"
+            >
+              Login
+            </NavbarButton>
+            <NavbarButton href="/download" variant="primary">
+              Get Started
+            </NavbarButton>
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+
+      <HeroParallax products={products} />
+
+      {/* Sticky scroll section with animation */}
+      <div ref={ref} className="relative h-[400vh]">
+        <GoogleGeminiEffect
+          pathLengths={pathLengths}
+          title="Built to win competitions"
+          description="This is a really cool ui component I imported. Learning how to integrate components is advanced coding right there. Definitely will elevate my portfolio."
+        />
+      </div>
+
+      {/* Features section — spaced down to avoid overlapping */}
+      <section id="features" className="bg-white dark:bg-black pt-0 mt-[-2px] relative z-10">
+        <Timeline
+          data={[
+            {
+              title: "2024",
+              content: (
+                <div>
+                  <p className="mb-8 text-sm text-neutral-800 dark:text-neutral-200">
+                    Expanded our real estate holdings and launched new advisory services.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <img src="/images/thumb1.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/thumb2.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/thumb3.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/thumb1.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                  </div>
+                </div>
+              ),
+            },
+            {
+              title: "2023",
+              content: (
+                <div>
+                  <p className="mb-8 text-sm text-neutral-800 dark:text-neutral-200">
+                    We launched our venture capital branch and opened two new offices.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <img src="/images/thumb2.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/thumb3.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                  </div>
+                </div>
+              ),
+            },
+          ]}
+        />
+      </section>
+
+
+      <section
+        id="team"
+        className="min-h-screen bg-gray-50 dark:bg-neutral-900"
+      ></section>
+
+      <section
+        id="compare"
+        className="min-h-screen bg-white dark:bg-black"
+      ></section>
+    </>
   );
 }
