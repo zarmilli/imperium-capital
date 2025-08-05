@@ -14,6 +14,7 @@ import {
 import { HeroParallax } from "@/components/hero-parallax";
 import { GoogleGeminiEffect } from "@/components/google-gemini-effect";
 import { Timeline } from "@/components/timeline";
+import { BackgroundLines } from "@/components/background-lines";
 
 import React, { useRef, useState } from "react";
 import { useScroll, useSpring, useTransform } from "motion/react";
@@ -22,7 +23,7 @@ export default function Home() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const navLinks = [
-    { name: "Features", link: "#features" },
+    { name: "About", link: "#About" },
     { name: "Team", link: "#team" },
     { name: "Compare", link: "#compare" },
   ];
@@ -124,15 +125,18 @@ export default function Home() {
       </div>
 
       {/* Features section — spaced down to avoid overlapping */}
-      <section id="features" className="bg-white dark:bg-black pt-0 mt-[-2px] relative z-10">
+      <section id="About" className="bg-white dark:bg-black pt-0 mt-[-2px] relative z-10">
         <Timeline
           data={[
             {
-              title: "2024",
+              title: "Beninging",
               content: (
                 <div>
                   <p className="mb-8 text-sm text-neutral-800 dark:text-neutral-200">
-                    Expanded our real estate holdings and launched new advisory services.
+                    In the beni... the be..ninging! THE BENINGING! I used procedural learning to learn how to integrate reusable
+                    components, connect APIs, master databases, Github, Ngiyakhohlwa the English name but I learned, or is it learnt, that other thing
+                    also. All this was fun but I got no certificate for it, so I couldn't get a professional job with that
+                    experience. Shame man sad neh? No it's not, there's light mos at the end of the tunnel why you wanna cry?
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     <img src="/images/thumb1.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
@@ -144,11 +148,15 @@ export default function Home() {
               ),
             },
             {
-              title: "2023",
+              title: "FNB!",
               content: (
                 <div>
                   <p className="mb-8 text-sm text-neutral-800 dark:text-neutral-200">
-                    We launched our venture capital branch and opened two new offices.
+                    Then came the hero! FNB and IT Varsity with the FNB app acadamy. You guys came with the light at the end of the
+                    tunnel and offered the course for free, with certification! I signed up faster than my ex left me. Yes we didn't
+                    get the NQF thingy thingy but hey, atleast recruiters get to see i'm not lying! I just didn't participate in the
+                    other competitions because I didn't have a fancy looking setup, when I post I don't get views, you know all those 
+                    confidence killing things... but I had to try this!
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     <img src="/images/thumb2.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
@@ -161,6 +169,20 @@ export default function Home() {
         />
       </section>
 
+      {/* 👇 Add BackgroundLines directly after */}
+      <section id="background-lines">
+        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        But Thube, <br /> Basic coding?
+      </h2>
+      <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+        The reason why I vested into knowing how to integrate reusable tailwind components is because
+        they make my coding experience smoother honestly, and they're more dynamic, attractive, and modern. Look at how visually appealing this website has been.
+        I do, however, have websites I coded over the months using basic HTML, CSS, and JS. Click on the projects button on the navigation bar to see them.
+        I spent a lot of time styling that bar, I will now force you to interact with it.
+      </p>
+    </BackgroundLines>
+      </section>
 
       <section
         id="team"

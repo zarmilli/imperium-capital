@@ -242,7 +242,7 @@ export const NavbarLogo = () => {
         width={30}
         height={30}
       />
-      <span className="font-medium text-black dark:text-white">Imperium Capital</span>
+      <span className="font-medium text-black dark:text-white">Thubelihle Zulu</span>
     </a>
   );
 };

@@ -38,10 +38,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Our Growth Timeline
+          My Growth Timeline
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          Key milestones in our evolution as an investment leader.
+          You're probably wondering how can one website be so cool, I'm blushing! Here's some backstory. I actually started learning how to code when I was in my final year
+          in 2024. No fancy equipment, no prior knowledge, just a curious 20 year old and a R2000 laptop I saved up for. It was terrible but it held up ahh shame
+          yazi poor celeron was overheating.
         </p>
       </div>
 
