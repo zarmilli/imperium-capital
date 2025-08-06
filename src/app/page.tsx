@@ -15,35 +15,37 @@ import { HeroParallax } from "@/components/hero-parallax";
 import { GoogleGeminiEffect } from "@/components/google-gemini-effect";
 import { Timeline } from "@/components/timeline";
 import { BackgroundLines } from "@/components/background-lines";
+import { Spotlight } from "@/components/spotlight-new";
 
 import React, { useRef, useState } from "react";
 import { useScroll, useSpring, useTransform } from "motion/react";
+import Link from "next/link";
 
 export default function Home() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const navLinks = [
-    { name: "About", link: "#About" },
-    { name: "Team", link: "#team" },
-    { name: "Compare", link: "#compare" },
-  ];
+  { name: "About", link: "#about" },
+  { name: "Team", link: "/team" },
+  { name: "Projects", link: "/projects" },
+];
 
   const products = [
-    { title: "Real Estate Growth", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Private Equity", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Diversified Assets", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Wealth Planning", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Capital Preservation", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Fixed Income", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Global Strategy", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "ESG Investments", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Startup Advisory", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Alternative Assets", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Pension Planning", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Smart Portfolio", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Risk Management", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Liquidity Services", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Venture Capital", link: "#compare", thumbnail: "/images/thumb3.png" },
+    { title: "Thube", link: "#features", thumbnail: "/images/thube.png" },
+    { title: "Squarre", link: "#compare", thumbnail: "/images/squarre.png" },
+    { title: "Zarmilli", link: "#team", thumbnail: "/images/zarmilli.png" },
+    { title: "Smart Money", link: "#features", thumbnail: "/images/farm.png" },
+    { title: "zarmilli", link: "#team", thumbnail: "/images/zarmilli.png" },
+    { title: "squarre", link: "#compare", thumbnail: "/images/squarre.png" },
+    { title: "Global Strategy", link: "#features", thumbnail: "/images/squarre.png" },
+    { title: "Zarmilli", link: "#team", thumbnail: "/images/farm.png" },
+    { title: "Squarre", link: "#compare", thumbnail: "/images/thube.png" },
+    { title: "Alternative Assets", link: "#features", thumbnail: "/images/thube.png" },
+    { title: "Pension Planning", link: "#team", thumbnail: "/images/zarmilli.png" },
+    { title: "Smart Portfolio", link: "#compare", thumbnail: "/images/squarre.png" },
+    { title: "Risk Management", link: "#features", thumbnail: "/images/thube.png" },
+    { title: "Liquidity Services", link: "#team", thumbnail: "/images/zarmilli.png" },
+    { title: "Venture Capital", link: "#compare", thumbnail: "/images/squarre.png" },
   ];
 
   const ref = useRef(null);
@@ -63,17 +65,19 @@ export default function Home() {
     <>
       <Navbar>
         <NavBody>
-          <NavbarLogo />
+          <Link href="/">
+            <NavbarLogo />
+          </Link>
           <NavItems items={navLinks} />
           <div className="ml-auto hidden lg:flex space-x-4">
             <NavbarButton
-              href="https://zarmilli.github.io/Squarre/login.html"
+              href="https://zarmilli.github.io/Squarre"
               variant="secondary"
             >
-              Login
+              Try Squarre
             </NavbarButton>
-            <NavbarButton href="/download" variant="primary">
-              Get Started
+            <NavbarButton href="/contact" variant="primary">
+              Contact
             </NavbarButton>
           </div>
         </NavBody>
@@ -101,14 +105,14 @@ export default function Home() {
               </a>
             ))}
             <NavbarButton
-              href="https://zarmilli.github.io/Squarre/login.html"
-              variant="secondary"
-            >
-              Login
-            </NavbarButton>
-            <NavbarButton href="/download" variant="primary">
-              Get Started
-            </NavbarButton>
+            href="https://zarmilli.github.io/Squarre"
+            variant="secondary"
+          >
+            Try Squarre
+          </NavbarButton>
+          <NavbarButton href="/contact" variant="primary">
+            Contact
+          </NavbarButton>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
@@ -120,7 +124,7 @@ export default function Home() {
         <GoogleGeminiEffect
           pathLengths={pathLengths}
           title="Built to win competitions"
-          description="This is a really cool ui component I imported. Learning how to integrate components is advanced coding right there. Definitely will elevate my portfolio."
+          description="Good design repeats itself, and so do good elements. Learning how to integrate components is advanced coding right there. Definitely will elevate my portfolio."
         />
       </div>
 
@@ -133,16 +137,16 @@ export default function Home() {
               content: (
                 <div>
                   <p className="mb-8 text-sm text-neutral-800 dark:text-neutral-200">
-                    In the beni... the be..ninging! THE BENINGING! I used procedural learning to learn how to integrate reusable
+                    In the beni... the be..ninging! IN THE BENINGING! I used procedural learning to learn how to integrate reusable
                     components, connect APIs, master databases, Github, Ngiyakhohlwa the English name but I learned, or is it learnt, that other thing
                     also. All this was fun but I got no certificate for it, so I couldn't get a professional job with that
                     experience. Shame man sad neh? No it's not, there's light mos at the end of the tunnel why you wanna cry?
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     <img src="/images/thumb1.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
-                    <img src="/images/thumb2.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
-                    <img src="/images/thumb3.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
-                    <img src="/images/thumb1.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/zarmilli.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/squarre.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/thube.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
                   </div>
                 </div>
               ),
@@ -159,8 +163,8 @@ export default function Home() {
                     confidence killing things... but I had to try this!
                   </p>
                   <div className="grid grid-cols-2 gap-4">
-                    <img src="/images/thumb2.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
-                    <img src="/images/thumb3.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/zarmilli.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
+                    <img src="/images/squarre.png" className="h-20 md:h-44 lg:h-60 w-full rounded-lg object-cover shadow" alt="" />
                   </div>
                 </div>
               ),
@@ -184,15 +188,16 @@ export default function Home() {
     </BackgroundLines>
       </section>
 
-      <section
-        id="team"
-        className="min-h-screen bg-gray-50 dark:bg-neutral-900"
-      ></section>
+      <footer className="relative bg-black overflow-hidden h-[200px]">
+        <div className="relative z-10 text-center text-white pt-20 pb-40">
+          <h2 className="text-3xl font-bold mb-4">Footers shouldn't be boring</h2>
+          <p className="text-sm text-neutral-400">
+            You've been here hey, I feel stalked. I don't blame you though, let's go grab some coffee now.
+          </p>
+        </div>
 
-      <section
-        id="compare"
-        className="min-h-screen bg-white dark:bg-black"
-      ></section>
+        <Spotlight />
+      </footer>
     </>
   );
 }
