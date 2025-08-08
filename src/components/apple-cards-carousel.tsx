@@ -262,8 +262,7 @@ useOutsideClick(containerRef as RefObject<HTMLDivElement>, handleClose);
         <BlurImage
           src={card.src}
           alt={card.title}
-          fill
-          className="absolute inset-0 z-10 object-cover"
+          className="absolute inset-0 z-10 object-cover w-full h-full"
         />
       </motion.button>
     </>
@@ -278,23 +277,20 @@ export const BlurImage = ({
   alt,
   ...rest
 }: ImageProps) => {
-  const [isLoading, setLoading] = useState(true);
   return (
     <img
       className={cn(
-        "h-full w-full transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
+        "h-full w-full transition duration-300 blur-0", // no blur at all
         className,
       )}
-      onLoad={() => setLoading(false)}
       src={src as string}
       width={width}
       height={height}
       loading="lazy"
       decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
       {...rest}
     />
   );
 };
+
