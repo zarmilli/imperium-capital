@@ -18,21 +18,21 @@ import { HeroParallax } from "@/components/hero-parallax";
 
 // Dummy images for hero parallax
 const products = [
-    { title: "Real Estate Growth", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Private Equity", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Diversified Assets", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Wealth Planning", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Capital Preservation", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Fixed Income", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Global Strategy", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "ESG Investments", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Startup Advisory", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Alternative Assets", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Pension Planning", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Smart Portfolio", link: "#compare", thumbnail: "/images/thumb3.png" },
-    { title: "Risk Management", link: "#features", thumbnail: "/images/thumb1.png" },
-    { title: "Liquidity Services", link: "#team", thumbnail: "/images/thumb2.png" },
-    { title: "Venture Capital", link: "#compare", thumbnail: "/images/thumb3.png" },
+    { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
+    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Call me", link: "0719692533", thumbnail: "/images/call.png" },
+    { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
+    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Text me", link: "https://wa.me/+27682734215", thumbnail: "/images/chat.png" },
+    { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
+    { title: "Text me", link: "https://wa.me/+27682734215", thumbnail: "/images/chat.png" },
+    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
+    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Call me", link: "0719692533", thumbnail: "/images/call.png" },
+    { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
+    { title: "Text me", link: "https://wa.me/+27682734215", thumbnail: "/images/chat.png" },
+    { title: "Call me", link: "0719692533", thumbnail: "/images/call.png" },
   ];
 
 export default function ContactPage() {
@@ -105,7 +105,7 @@ export default function ContactPage() {
         <div className="relative z-10 text-center text-white pt-20 pb-40">
           <h2 className="text-3xl font-bold mb-4">Let’s connect</h2>
           <p className="text-sm text-neutral-400">
-            Whether it's a project idea, collaboration, or feedback — we're here for it.
+            Whether it's a project idea, collaboration, or feedback — I'm here for it.
           </p>
         </div>
         <Spotlight />

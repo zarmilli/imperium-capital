@@ -84,10 +84,11 @@ export default function ProjectsPage() {
       <section id="projects-hero">
         <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 pt-20 pb-10">
           <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-3xl md:text-5xl font-sans font-bold tracking-tight">
-            Our Projects
+            My Projects
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-            A collection of websites built with care and precision by the Imperium Capital team.
+            A collection of websites built with pure HTML, CSS, and JS. ALso, remember what I said about reusable components making life easy
+            ? I built this page within 1 hour because most of it's components are from the home page, that is what I call efficiency. Hire me please, I'm blinking twice for help!
           </p>
         </BackgroundLines>
       </section>
@@ -105,11 +106,11 @@ export default function ProjectsPage() {
             <div className="flex flex-col p-4 tracking-tight text-slate-100/90 w-[20rem] h-[22rem]">
                 <h3 className="font-bold text-base text-white mb-1">Squarre</h3>
                 <p className="text-sm text-slate-400 mb-2">
-                A no-code website builder for startups, freelancers, and creatives.
+                A first of it's kind and my most recent project. An agricultural investment app that allows users to invest in agricultural assets while also functioning as a standard virtual bank. Give it a look!
                 </p>
                 <div className="flex-1 w-full mt-4 rounded-lg overflow-hidden">
                 <img
-                    src="/images/squarre-preview.jpg"
+                    src="/images/squarre.jpeg"
                     alt="Squarre preview"
                     className="w-full h-full object-cover rounded-lg"
                 />
@@ -126,11 +127,11 @@ export default function ProjectsPage() {
             <div className="flex flex-col p-4 tracking-tight text-slate-100/90 w-[20rem] h-[22rem]">
                 <h3 className="font-bold text-base text-white mb-1">Zarmilli</h3>
                 <p className="text-sm text-slate-400 mb-2">
-                A personal branding website showcasing design and web projects.
+                An interior design studio website built to showcase our products to clients. Yes I tried interior design too don't judge me.
                 </p>
                 <div className="flex-1 w-full mt-4 rounded-lg overflow-hidden">
                 <img
-                    src="/images/zarmilli-preview.jpg"
+                    src="/images/zarmilli.jpeg"
                     alt="Zarmilli preview"
                     className="w-full h-full object-cover rounded-lg"
                 />
@@ -147,11 +148,11 @@ export default function ProjectsPage() {
             <div className="flex flex-col p-4 tracking-tight text-slate-100/90 w-[20rem] h-[22rem]">
                 <h3 className="font-bold text-base text-white mb-1">Thube</h3>
                 <p className="text-sm text-slate-400 mb-2">
-                A minimalist website for a property investment brand.
+                Literally just about me, who I am, and what I do. Stare for too long and you'll be at risk of falling in love.
                 </p>
                 <div className="flex-1 w-full mt-4 rounded-lg overflow-hidden">
                 <img
-                    src="/images/thube-preview.jpg"
+                    src="/images/thube.jpeg"
                     alt="Thube preview"
                     className="w-full h-full object-cover rounded-lg"
                 />
@@ -168,7 +169,7 @@ export default function ProjectsPage() {
         <div className="relative z-10 text-center text-white pt-20 pb-40">
           <h2 className="text-3xl font-bold mb-4">Footers shouldn't be boring</h2>
           <p className="text-sm text-neutral-400">
-            You've been here hey, I feel stalked. I don't blame you though, let's go grab some coffee now.
+            Wait you're still here? Niiiiiiiiiice.
           </p>
         </div>
 

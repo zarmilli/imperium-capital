@@ -30,23 +30,16 @@ export default function TeamPage() {
   const teamCards = [
     {
       src: "/images/team1.png",
-      title: "No, good looking!",
-      category: "Looking good?",
+      title: "Startups I own",
+      category: "Business Development",
       content: (
         <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl">
           <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto">
             <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              Visionary. Strategist. Builder.
+              An entrepreneur at heart
             </span>{" "}
-            Thubelihle founded Imperium Capital with a mission to create future-forward investment ecosystems. With a background in property development and startup incubation, he leads with passion and purpose.
+            I founded Imperium Gold Group with a mission to create future-forward investment ecosystems. With a background in property development and startup incubation, I drive this startup company with passion and purpose.
           </p>
-          <img
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
         </div>
       ),
     },
@@ -58,17 +51,10 @@ export default function TeamPage() {
         <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl">
           <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto">
             <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              Operations with precision.
+              You'd be surprised
             </span>{" "}
-            Nonhle ensures smooth day-to-day functioning of all our ventures. From systems optimization to execution, her organizational skills keep Imperium’s engine running.
+            I've actually been interested in engaging in fashion photography. I did some training with Edcon Agency and have been featured on some small brand promotions, but I've let that go now.
           </p>
-          <img
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
         </div>
       ),
     },
@@ -80,39 +66,25 @@ export default function TeamPage() {
         <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl">
           <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto">
             <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              Turning designs into code.
+              Turning concepts to reality.
             </span>{" "}
-            Jason leads our software architecture and transforms business goals into scalable digital solutions. He’s the brain behind our platforms.
+            Artificial Intelligence is at the centre of Web3, and having the skills to integrate it makes a developer's websites a lot more efficient.
           </p>
-          <img
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
         </div>
       ),
     },
     {
-      src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Zanele Mthembu",
-      category: "Marketing Lead",
+      src: "/images/team4.png",
+      title: "My professional career",
+      category: "Qualification",
       content: (
         <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl">
           <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto">
             <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              Branding brilliance.
+              The therapist you need.
             </span>{" "}
-            Zanele is the voice of Imperium Capital, building brand identity and leading marketing campaigns that convert audience into believers.
+            I actually just graduated for a BHSc in Recreation Sciences in April and I'm a qualified Recreational Therapist.
           </p>
-          <img
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
         </div>
       ),
     },
@@ -175,10 +147,10 @@ export default function TeamPage() {
       <section id="team-hero">
         <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 pt-20 pb-10">
           <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-3xl md:text-5xl font-sans font-bold tracking-tight">
-            Meet Our Team
+            One Man Team
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-            A passionate group of innovators, builders, and visionaries behind Imperium Capital.
+            The passionate innovator, builder, and visionary strategist behind the website.
           </p>
         </BackgroundLines>
       </section>
@@ -202,7 +174,7 @@ export default function TeamPage() {
         <div className="relative z-10 text-center text-white pt-20 pb-40">
           <h2 className="text-3xl font-bold mb-4">Footers shouldn't be boring</h2>
           <p className="text-sm text-neutral-400">
-            You've been here hey, I feel stalked. I don't blame you though, let's go grab some coffee now.
+            Still here? You need more coffee.
           </p>
         </div>
         <Spotlight />
