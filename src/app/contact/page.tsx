@@ -19,20 +19,20 @@ import { HeroParallax } from "@/components/hero-parallax";
 // Dummy images for hero parallax
 const products = [
     { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
-    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
-    { title: "Call me", link: "0719692533", thumbnail: "/images/call.png" },
+    { title: "Email me", link: "mailto:tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Call me", link: "tel:+27719692533", thumbnail: "/images/call.png" },
     { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
-    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Email me", link: "mailto:tlihle351@gmail.com", thumbnail: "/images/email.png" },
     { title: "Text me", link: "https://wa.me/+27682734215", thumbnail: "/images/chat.png" },
     { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
     { title: "Text me", link: "https://wa.me/+27682734215", thumbnail: "/images/chat.png" },
-    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Email me", link: "mailto:tlihle351@gmail.com", thumbnail: "/images/email.png" },
     { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
-    { title: "Email me", link: "tlihle351@gmail.com", thumbnail: "/images/email.png" },
-    { title: "Call me", link: "0719692533", thumbnail: "/images/call.png" },
+    { title: "Email me", link: "mailto:tlihle351@gmail.com", thumbnail: "/images/email.png" },
+    { title: "Call me", link: "tel:+27719692533", thumbnail: "/images/call.png" },
     { title: "Instagram", link: "https://www.instagram.com/thee.goldenone", thumbnail: "/images/insta.png" },
     { title: "Text me", link: "https://wa.me/+27682734215", thumbnail: "/images/chat.png" },
-    { title: "Call me", link: "0719692533", thumbnail: "/images/call.png" },
+    { title: "Call me", link: "tel:+27719692533", thumbnail: "/images/call.png" },
   ];
 
 export default function ContactPage() {
