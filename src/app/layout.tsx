@@ -18,10 +18,12 @@ export const metadata: Metadata = {
   description: "Inspired by FNB App Acadamy competition",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body>{children}</body>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
