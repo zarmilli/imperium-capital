@@ -4,6 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "noEmitOnError": false, // ✅ emit code even if TS finds errors
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
