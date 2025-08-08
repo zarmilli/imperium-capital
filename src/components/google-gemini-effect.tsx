@@ -3,10 +3,13 @@ import { cn } from "@/lib/utils";
 import { motion, MotionValue } from "motion/react";
 import React from "react";
 
+const linearEasing = (t: number) => t;
+
 const transition = {
   duration: 0,
-  ease: linear,
+  ease: linearEasing,
 };
+
 
 export const GoogleGeminiEffect = ({
   pathLengths,
